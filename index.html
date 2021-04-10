@@ -52,18 +52,24 @@
                 </div>
                 <!-- Form -->
                 <div class="form-card content-form">
-                    <form name="Contact" method="POST" data-netlify="true">
+                    <form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                          </p>                        
+
+                        <!-- Form fields -->   
                         <div class="form-controls">
-                            <input netlify-honeypot="bot-field" method="POST" data-netlify="true" type="text" name="Name" placeholder="Name">
+                            <input type="text" name="Name" placeholder="Name">
                         </div>
                         <div class="form-controls">
-                            <input method="POST" data-netlify="true" type="month" name="BirthDate" placeholder="Birth Date">
+                            <input type="month" name="BirthDate" placeholder="Birth Date">
                         </div>
                         <div class="form-controls">
-                            <input method="POST" data-netlify="true" type="text" name="BirthLocation" placeholder="Birth Location">
+                            <input type="text" name="BirthLocation" placeholder="Birth Location">
                         </div>
                         <div class="form-controls">
-                            <input method="POST" data-netlify="true" type="time" name="Birth Time" placeholder="Birth Time">
+                            <input type="time" name="Birth Time" placeholder="Birth Time">
                         </div>
                         <input type="submit" value="Submit" placeholder="Submit" class="btn">
                     </form>

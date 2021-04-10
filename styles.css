@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+,hidden {
+    visibility: hidden;
+    height: 0;
+}
 
 /* Global Styles
 ------------------*/
