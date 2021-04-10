@@ -1,0 +1,225 @@
+/* Root
+------------------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Global Styles
+------------------*/
+body {
+    font-family: 'Cormorant Garamond', serif;
+    /* font-family: 'Merriweather', serif; */
+    line-height: 1.4;
+    background-color: rgb(48, 48, 48);
+    color: mintcream;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding-right: 10px;
+    margin-right: 5px;
+    
+}
+a:hover {
+    color: cadetblue;
+}
+img {
+    width: 100%;
+}
+
+
+/* Header
+------------------*/
+.header {
+    border-bottom: black solid 1px;
+    margin-bottom: 1px;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+h2 {
+    color: yellowgreen;
+}
+
+
+/* Navigation
+------------------*/
+.navigation {
+    background-color: whitesmoke;
+    padding: 5px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;  
+}
+.container {
+    background-color: rgb(48, 48, 48);
+    padding: 15px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.container-navbar {
+    background-color: whitesmoke;
+    padding: 5px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.container-content {
+    background-color: rgb(39, 1, 1);
+    padding: 5px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.nav-links li a:hover {
+    border-bottom: 2px solid black;
+}
+
+/* Form 
+-----------------*/
+.form-card {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 5px 10px 30px rgba(300,200,50,0.4);
+    padding: 10px;
+    justify-self: flex-end;
+    width: 260px;
+    z-index: 100;
+    animation: slideInFromRight 2s ease;
+
+}
+.content-form {
+    position: relative;
+    top: 18%;
+    right: 15%;
+    height: 300px;
+    
+    
+}
+.form-controls {
+    margin: 20px;
+}
+.form-card input[type='text'],
+.form-card input[type='email'],
+.form-card input[type='time'],
+.form-card input[type='month'] {
+    border: 0;
+    border-bottom: 1px solid ;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.form-card input:hover {
+    border: 1px solid yellowgreen;
+}
+
+.content-text {
+    animation: slideInFromLeft 1s ease;
+}
+
+/* Main Content 
+-----------------*/
+
+.content h1 {
+    font-family: 'Merriweather', serif;
+    color: yellowgreen;
+    font-size: xx-large;
+}
+.content p {
+    padding-bottom: 15px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: visible;
+}
+.content {
+    height: 400px;
+    background-color:rgb(39, 1, 1);
+    position: relative;
+}
+.content::before,
+.content::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -15px;
+    right: 0;
+    left: 0;
+    background-color: rgb(39, 1, 1);
+    transform: skewY(-5deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+
+/* Utilities
+-----------------*/
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(159, 211, 54);
+    
+}
+.btn-trans {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: transparent;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    
+}
+
+.btn-trans:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+/* Animations
+----------------*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
